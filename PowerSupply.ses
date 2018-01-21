@@ -1,0 +1,142 @@
+
+(session PowerSupply.ses
+  (base_design PowerSupply.dsn)
+  (placement
+    (resolution um 10)
+    (component Capacitors_THT:CP_Radial_D5.0mm_P2.50mm
+      (place C1 1841500 -1104900 front 270)
+      (place C2 1917700 -787400 front 180)
+      (place C3 1765300 -1104900 front 270)
+      (place C4 1689100 -787400 front 0)
+    )
+    (component "w_conn_screw:mstba_2,5%2f2-g-5,08"
+      (place J1 1803400 -787400 front 0)
+    )
+    (component "w_conn_screw:mstba_2,5%2f4-g-5,08"
+      (place J2 1803400 -1181100 front 180)
+    )
+    (component "TO_SOT_Packages_THT:TO-220-3_Horizontal"
+      (place U1 1854200 -1041400 front 0)
+      (place U2 1701800 -1041400 front 0)
+    )
+  )
+  (was_is
+  )
+  (routes 
+    (resolution um 10)
+    (parser
+      (host_cad "KiCad's Pcbnew")
+      (host_version 4.0.7)
+    )
+    (library_out 
+      (padstack "Via[0-1]_600:400_um"
+        (shape
+          (circle F.Cu 6000 0 0)
+        )
+        (shape
+          (circle B.Cu 6000 0 0)
+        )
+        (attach off)
+      )
+    )
+    (network_out 
+      (net VCC
+        (wire
+          (path B.Cu 10000
+            1841500 -1104900
+            1841500 -1086900
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1854200 -1041400
+            1854200 -1074200
+            1841500 -1086900
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1765300 -1104900
+            1823500 -1104900
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1841500 -1104900
+            1823500 -1104900
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1752600 -1060400
+            1765300 -1073100
+            1765300 -1104900
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1752600 -1041400
+            1752600 -1022400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1778000 -787400
+            1778000 -997000
+            1752600 -1022400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1752600 -1041400
+            1752600 -1060400
+          )
+        )
+      )
+      (net +5V
+        (wire
+          (path B.Cu 10000
+            1905000 -1041400
+            1905000 -1022400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1905000 -1022400
+            1917700 -1009700
+            1917700 -787400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1905000 -1041400
+            1905000 -1130701
+            1879600 -1156101
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1879600 -1181100
+            1879600 -1156101
+          )
+        )
+      )
+      (net +3V3
+        (wire
+          (path B.Cu 10000
+            1727200 -1041400
+            1727200 -940221
+            1689100 -902121
+            1689100 -787400
+          )
+        )
+        (wire
+          (path B.Cu 10000
+            1727200 -1181100
+            1727200 -1041400
+          )
+        )
+      )
+    )
+  )
+)
